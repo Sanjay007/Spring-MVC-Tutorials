@@ -1,12 +1,20 @@
 Spring 1 md
+	          
+<% 
+String name=(String)session.getAttribute("username"); 
+if(name!=null){
+	out.print("Hello User: You have entered the name: "+name); 
+
+}else {
+	out.print("<a href="+"/login"+" >Please login</a>"); 
+
+}
+
+
+%> 
 
 
 
-<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>4.2.3.RELEASE</version>
-		</dependency>
 		
 		
 		
@@ -201,6 +209,7 @@ public class TodoService {
 		}
 	}
 }
+
 
 
 <beans xmlns="http://www.springframework.org/schema/beans"
